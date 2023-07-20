@@ -16,14 +16,16 @@ struct ScheduleCardView: View {
                 Image("Line Number-1")
                 VStack(alignment: .leading) {
                     Text(line.destination)
-                        .font(.title)
+                        .font(.title2)
+                        .fontWeight(.medium)
                     Text(line.trains[0].getArrivalTime())
                         .font(.subheadline)
                 }
                 Spacer()
                 VStack {
                     Text("\(line.trains[0].getRemainingMinutes())")
-                        .font(.title)
+                        .font(.title2)
+                        .fontWeight(.medium)
                     Text("mins")
                         .font(.subheadline)
                 }

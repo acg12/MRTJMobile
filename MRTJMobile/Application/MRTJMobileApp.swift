@@ -12,6 +12,7 @@ struct MRTJMobileApp: App {
     var body: some Scene {
         WindowGroup {
             ScheduleView()
+                .preferredColorScheme(.light)
         }
     }
 }
