@@ -8,7 +8,7 @@
 import Foundation
 
 struct Train {
-    private var density: [Int]
+    var density: [Int]
     private var arrival: Date
     
     init(density: [Int], arrival: Date) {

@@ -31,10 +31,17 @@ struct ScheduleCardView: View {
                 }
             }
             
-            ZStack {
-                Image("Train-left")
-                    .scaledToFill()
+            GeometryReader { reader in
+                ZStack {
+                    Image("Train-left")
+                        .scaledToFit()
+                    ForEach(line.trains[0].density, id: \.self) { density in
+                        DensityBox(density: density, height: Cons.densityBoxHeight, width: Cons.densityBoxWidth)
+                            .position(x: reader.frame(in: .local).minX + 25, y: reader.frame(in: .local).midY - 8)
+                    }
+                }
             }
+            .frame(width: 327.81, height: 47)
         }
         .padding(Cons.spacing)
         .background(.white)
