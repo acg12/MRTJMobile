@@ -30,6 +30,7 @@
 		8FE589E32A6942B500B4DB0D /* package-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE589E02A6942B500B4DB0D /* package-lock.json */; };
 		8FE589E42A6942B500B4DB0D /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FE589E12A6942B500B4DB0D /* server.js */; };
 		8FE589E52A6942B500B4DB0D /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE589E22A6942B500B4DB0D /* package.json */; };
+		8FE589E72A694B2500B4DB0D /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589E62A694B2500B4DB0D /* Sheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		8FE589E02A6942B500B4DB0D /* package-lock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
 		8FE589E12A6942B500B4DB0D /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
 		8FE589E22A6942B500B4DB0D /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		8FE589E62A694B2500B4DB0D /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		0B01F4E72A693A7E001222D3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8FE589DA2A6941FD00B4DB0D /* ReceiverTemp.swift */,
 				8FE589D52A69414F00B4DB0D /* Map */,
 				0B01F4E82A693A7E001222D3 /* Home */,
 				0B01F4F42A693A7E001222D3 /* Schedule */,
@@ -343,7 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				8FE589D62A69415C00B4DB0D /* MapView.swift */,
-				8FE589DA2A6941FD00B4DB0D /* ReceiverTemp.swift */,
+				8FE589E62A694B2500B4DB0D /* Sheet.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				0B01F5182A693A7E001222D3 /* CurrLocationTextView.swift in Sources */,
 				8FE589D32A69411600B4DB0D /* Tabbar.swift in Sources */,
 				0B01F5172A693A7E001222D3 /* ScheduleViewModel.swift in Sources */,
+				8FE589E72A694B2500B4DB0D /* Sheet.swift in Sources */,
 				0B01F5142A693A7E001222D3 /* Train.swift in Sources */,
 				0B01F4D22A693A55001222D3 /* MRTJMobileApp.swift in Sources */,
 				0B01F5152A693A7E001222D3 /* MRTLine.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import SwiftUI
 import MapKit
-
+import CoreLocation
 struct MapView: View {
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -6.239085, longitude: 106.7985954),
                                                    span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
@@ -57,8 +57,23 @@ struct MapView: View {
                                           }
                               )
                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-                   MapViewWithPin(coordinates: coordinates, labels: labels, region: $region)
+                       
+                                           
+                                       
+                
+            MapViewWithPin(coordinates: coordinates, labels: labels, region: $region)
+                       .onTapGesture {
+                                          showRandomSheet = true // Show the sheet when the map is tapped
+                                      }
+                              
+                              .sheet(isPresented: $showRandomSheet, onDismiss: {
+                                  // Code to perform when the sheet is dismissed (optional)
+                              }) {
+                                  // Content of the sheet (two random numbers)
+                                 RandomNumberView()
+                                      .presentationDetents([.height(150), .medium, .large])
+                                             .presentationDragIndicator(.automatic)
+                              }
             
               
                    VStack {
@@ -105,6 +120,13 @@ struct MapView: View {
                span.longitudeDelta = min(span.longitudeDelta * 2, 180)
                region.span = span
            }
+    private func getIndex(for coordinate: CLLocationCoordinate2D) -> Int? {
+         // Find the index of the tapped coordinate in the array of coordinates
+         guard let index = coordinates.firstIndex(of: coordinate) else {
+             return nil
+         }
+         return index
+     }
     private func zoom(_ scale: CGFloat) {
             var span = region.span
             span.latitudeDelta = max(min(span.latitudeDelta / scale, 180), 0.01)
@@ -191,6 +213,11 @@ struct MapViewWithPin: UIViewRepresentable {
     }
 }
 
+extension CLLocationCoordinate2D: Equatable {
+    public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+}
 
 
 
