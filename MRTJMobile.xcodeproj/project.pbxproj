@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B01F4D22A693A55001222D3 /* MRTJMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F4D12A693A55001222D3 /* MRTJMobileApp.swift */; };
+		0B01F4D92A693A56001222D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B01F4D82A693A56001222D3 /* Preview Assets.xcassets */; };
+		0B01F50C2A693A7E001222D3 /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F4E42A693A7E001222D3 /* Failure.swift */; };
+		0B01F50D2A693A7E001222D3 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F4E62A693A7E001222D3 /* UseCase.swift */; };
+		0B01F5132A693A7E001222D3 /* StationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F4F72A693A7E001222D3 /* StationData.swift */; };
+		0B01F5142A693A7E001222D3 /* Train.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F4F92A693A7E001222D3 /* Train.swift */; };
+		0B01F5152A693A7E001222D3 /* MRTLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F4FA2A693A7E001222D3 /* MRTLine.swift */; };
+		0B01F5162A693A7E001222D3 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F4FB2A693A7E001222D3 /* Station.swift */; };
+		0B01F5172A693A7E001222D3 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F4FE2A693A7E001222D3 /* ScheduleViewModel.swift */; };
+		0B01F5182A693A7E001222D3 /* CurrLocationTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5002A693A7E001222D3 /* CurrLocationTextView.swift */; };
+		0B01F5192A693A7E001222D3 /* ScheduleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5012A693A7E001222D3 /* ScheduleCardView.swift */; };
+		0B01F51A2A693A7E001222D3 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5032A693A7E001222D3 /* ScheduleView.swift */; };
+		0B01F51B2A693A7E001222D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5052A693A7E001222D3 /* Constants.swift */; };
+		0B01F51C2A693A7E001222D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B01F5062A693A7E001222D3 /* Assets.xcassets */; };
+		0B01F51D2A693A7E001222D3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5082A693A7E001222D3 /* LocationManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0B01F4CE2A693A55001222D3 /* MRTJMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRTJMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B01F4D12A693A55001222D3 /* MRTJMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRTJMobileApp.swift; sourceTree = "<group>"; };
+		0B01F4D82A693A56001222D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0B01F4E12A693A7E001222D3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		0B01F4E42A693A7E001222D3 /* Failure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
+		0B01F4E62A693A7E001222D3 /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		0B01F4EA2A693A7E001222D3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		0B01F4EC2A693A7E001222D3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		0B01F4EF2A693A7E001222D3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		0B01F4F12A693A7E001222D3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		0B01F4F32A693A7E001222D3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		0B01F4F72A693A7E001222D3 /* StationData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationData.swift; sourceTree = "<group>"; };
+		0B01F4F92A693A7E001222D3 /* Train.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Train.swift; sourceTree = "<group>"; };
+		0B01F4FA2A693A7E001222D3 /* MRTLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTLine.swift; sourceTree = "<group>"; };
+		0B01F4FB2A693A7E001222D3 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		0B01F4FE2A693A7E001222D3 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		0B01F5002A693A7E001222D3 /* CurrLocationTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrLocationTextView.swift; sourceTree = "<group>"; };
+		0B01F5012A693A7E001222D3 /* ScheduleCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleCardView.swift; sourceTree = "<group>"; };
+		0B01F5032A693A7E001222D3 /* ScheduleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		0B01F5052A693A7E001222D3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0B01F5062A693A7E001222D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B01F5082A693A7E001222D3 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0B01F50A2A693A7E001222D3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B01F4CB2A693A55001222D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B01F4C52A693A55001222D3 = {
+			isa = PBXGroup;
+			children = (
+				0B01F4D02A693A55001222D3 /* MRTJMobile */,
+				0B01F4CF2A693A55001222D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0B01F4CF2A693A55001222D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4CE2A693A55001222D3 /* MRTJMobile.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B01F4D02A693A55001222D3 /* MRTJMobile */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F51F2A693AAA001222D3 /* Application */,
+				0B01F4DF2A693A7E001222D3 /* Core */,
+				0B01F5092A693A7E001222D3 /* External */,
+				0B01F4E72A693A7E001222D3 /* Features */,
+				0B01F5042A693A7E001222D3 /* Resources */,
+				0B01F5072A693A7E001222D3 /* Shared */,
+				0B01F4D72A693A56001222D3 /* Preview Content */,
+			);
+			path = MRTJMobile;
+			sourceTree = "<group>";
+		};
+		0B01F4D72A693A56001222D3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4D82A693A56001222D3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0B01F4DF2A693A7E001222D3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4E02A693A7E001222D3 /* Extensions */,
+				0B01F4E22A693A7E001222D3 /* Domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0B01F4E02A693A7E001222D3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4E12A693A7E001222D3 /* .gitkeep */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0B01F4E22A693A7E001222D3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4E32A693A7E001222D3 /* Failures */,
+				0B01F4E52A693A7E001222D3 /* Usecases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0B01F4E32A693A7E001222D3 /* Failures */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4E42A693A7E001222D3 /* Failure.swift */,
+			);
+			path = Failures;
+			sourceTree = "<group>";
+		};
+		0B01F4E52A693A7E001222D3 /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4E62A693A7E001222D3 /* UseCase.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		0B01F4E72A693A7E001222D3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4E82A693A7E001222D3 /* Home */,
+				0B01F4F42A693A7E001222D3 /* Schedule */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0B01F4E82A693A7E001222D3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4E92A693A7E001222D3 /* Data */,
+				0B01F4EB2A693A7E001222D3 /* Domain */,
+				0B01F4ED2A693A7E001222D3 /* Presentation */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0B01F4E92A693A7E001222D3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4EA2A693A7E001222D3 /* .gitkeep */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0B01F4EB2A693A7E001222D3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4EC2A693A7E001222D3 /* .gitkeep */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0B01F4ED2A693A7E001222D3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4EE2A693A7E001222D3 /* ViewModel */,
+				0B01F4F02A693A7E001222D3 /* Components */,
+				0B01F4F22A693A7E001222D3 /* Pages */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0B01F4EE2A693A7E001222D3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4EF2A693A7E001222D3 /* .gitkeep */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0B01F4F02A693A7E001222D3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4F12A693A7E001222D3 /* .gitkeep */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0B01F4F22A693A7E001222D3 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4F32A693A7E001222D3 /* .gitkeep */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		0B01F4F42A693A7E001222D3 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4F52A693A7E001222D3 /* Data */,
+				0B01F4FC2A693A7E001222D3 /* Presentation */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		0B01F4F52A693A7E001222D3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4F62A693A7E001222D3 /* Datasources */,
+				0B01F4F82A693A7E001222D3 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0B01F4F62A693A7E001222D3 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4F72A693A7E001222D3 /* StationData.swift */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		0B01F4F82A693A7E001222D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4F92A693A7E001222D3 /* Train.swift */,
+				0B01F4FA2A693A7E001222D3 /* MRTLine.swift */,
+				0B01F4FB2A693A7E001222D3 /* Station.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B01F4FC2A693A7E001222D3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4FD2A693A7E001222D3 /* ViewModel */,
+				0B01F4FF2A693A7E001222D3 /* Components */,
+				0B01F5022A693A7E001222D3 /* Pages */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0B01F4FD2A693A7E001222D3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4FE2A693A7E001222D3 /* ScheduleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0B01F4FF2A693A7E001222D3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F5002A693A7E001222D3 /* CurrLocationTextView.swift */,
+				0B01F5012A693A7E001222D3 /* ScheduleCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0B01F5022A693A7E001222D3 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F5032A693A7E001222D3 /* ScheduleView.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		0B01F5042A693A7E001222D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F5052A693A7E001222D3 /* Constants.swift */,
+				0B01F5062A693A7E001222D3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0B01F5072A693A7E001222D3 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F5082A693A7E001222D3 /* LocationManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0B01F5092A693A7E001222D3 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F50A2A693A7E001222D3 /* .gitkeep */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		0B01F51F2A693AAA001222D3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0B01F4D12A693A55001222D3 /* MRTJMobileApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B01F4CD2A693A55001222D3 /* MRTJMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B01F4DC2A693A56001222D3 /* Build configuration list for PBXNativeTarget "MRTJMobile" */;
+			buildPhases = (
+				0B01F4CA2A693A55001222D3 /* Sources */,
+				0B01F4CB2A693A55001222D3 /* Frameworks */,
+				0B01F4CC2A693A55001222D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRTJMobile;
+			productName = MRTJMobile;
+			productReference = 0B01F4CE2A693A55001222D3 /* MRTJMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B01F4C62A693A55001222D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0B01F4CD2A693A55001222D3 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 0B01F4C92A693A55001222D3 /* Build configuration list for PBXProject "MRTJMobile" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B01F4C52A693A55001222D3;
+			productRefGroup = 0B01F4CF2A693A55001222D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B01F4CD2A693A55001222D3 /* MRTJMobile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B01F4CC2A693A55001222D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B01F4D92A693A56001222D3 /* Preview Assets.xcassets in Resources */,
+				0B01F51C2A693A7E001222D3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B01F4CA2A693A55001222D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B01F5132A693A7E001222D3 /* StationData.swift in Sources */,
+				0B01F50D2A693A7E001222D3 /* UseCase.swift in Sources */,
+				0B01F50C2A693A7E001222D3 /* Failure.swift in Sources */,
+				0B01F5192A693A7E001222D3 /* ScheduleCardView.swift in Sources */,
+				0B01F5182A693A7E001222D3 /* CurrLocationTextView.swift in Sources */,
+				0B01F5172A693A7E001222D3 /* ScheduleViewModel.swift in Sources */,
+				0B01F5142A693A7E001222D3 /* Train.swift in Sources */,
+				0B01F4D22A693A55001222D3 /* MRTJMobileApp.swift in Sources */,
+				0B01F5152A693A7E001222D3 /* MRTLine.swift in Sources */,
+				0B01F51A2A693A7E001222D3 /* ScheduleView.swift in Sources */,
+				0B01F5162A693A7E001222D3 /* Station.swift in Sources */,
+				0B01F51B2A693A7E001222D3 /* Constants.swift in Sources */,
+				0B01F51D2A693A7E001222D3 /* LocationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0B01F4DA2A693A56001222D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0B01F4DB2A693A56001222D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B01F4DD2A693A56001222D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MRTJMobile/Preview Content\"";
+				DEVELOPMENT_TEAM = 897329R84L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = angela.nano3.MRTJMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B01F4DE2A693A56001222D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MRTJMobile/Preview Content\"";
+				DEVELOPMENT_TEAM = 897329R84L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = angela.nano3.MRTJMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B01F4C92A693A55001222D3 /* Build configuration list for PBXProject "MRTJMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B01F4DA2A693A56001222D3 /* Debug */,
+				0B01F4DB2A693A56001222D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B01F4DC2A693A56001222D3 /* Build configuration list for PBXNativeTarget "MRTJMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B01F4DD2A693A56001222D3 /* Debug */,
+				0B01F4DE2A693A56001222D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B01F4C62A693A55001222D3 /* Project object */;
+}
