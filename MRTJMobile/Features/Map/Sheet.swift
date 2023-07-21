@@ -13,25 +13,41 @@ struct RandomNumberView: View {
 
     var body: some View {
         VStack {
-         
-               
-            HStack{
-                VStack{
+            HStack {
+                Image("tren")
+                    
+                   
+                VStack(alignment: .leading) {
+                
                     Text("You're now at :")
                         
-                 
                     Text("BLOK M BCA")
                         .font(.title)
-              
                 }
+                .padding()
                 Spacer()
             }
-            Text("Bunderan HI:               \(randomNumber1) minutes")
-                .padding()
-            Text("Lebak Bukus:                 \(randomNumber2) minutes")
-                .padding()
+            .padding(.horizontal)
 
-          
+            HStack {
+                Image(systemName: "arrow.right") // Add the arrow symbol here
+                    .foregroundColor(.black)
+                    .padding(.trailing)
+                Text("Bunderan HI:")
+                Spacer()
+                Text("\(randomNumber1) minutes")
+            }
+            .padding()
+
+            HStack {
+                Image(systemName: "arrow.right") // Add the arrow symbol here
+                    .foregroundColor(.black)
+                    .padding(.trailing)
+                Text("Lebak Bulus:")
+                Spacer()
+                Text("\(randomNumber2) minutes")
+            }
+            .padding()
 
             Spacer()
         }
@@ -46,8 +62,4 @@ struct RandomNumberView: View {
     }
 }
 
-struct RandomNumberView_Previews: PreviewProvider {
-    static var previews: some View {
-        RandomNumberView()
-    }
-}
+

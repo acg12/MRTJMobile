@@ -13,6 +13,7 @@ struct MapView: View {
                                                    span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
     @State private var selectedPinIndex: Int? = nil
    
+       @State private var selectedCoordinate: CLLocationCoordinate2D? = nil
     @State private var showRandomSheet = false
     var coordinates: [CLLocationCoordinate2D] = [
         CLLocationCoordinate2D(latitude: -6.2894, longitude: 106.7740),
@@ -60,20 +61,19 @@ struct MapView: View {
                        
                                            
                                        
-                
-            MapViewWithPin(coordinates: coordinates, labels: labels, region: $region)
-                       .onTapGesture {
-                                          showRandomSheet = true // Show the sheet when the map is tapped
-                                      }
-                              
-                              .sheet(isPresented: $showRandomSheet, onDismiss: {
-                                  // Code to perform when the sheet is dismissed (optional)
-                              }) {
-                                  // Content of the sheet (two random numbers)
-                                 RandomNumberView()
-                                      .presentationDetents([.height(150), .medium, .large])
-                                             .presentationDragIndicator(.automatic)
-                              }
+            MapViewWithPin(coordinates: coordinates, labels: labels, region: $region, onAnnotationTapped: { coordinate in
+                         // Show the sheet when any of the pin points are tapped
+                         selectedCoordinate = coordinate
+                         showRandomSheet = true
+                     })
+                     .sheet(isPresented: $showRandomSheet, onDismiss: {
+                         // Code to perform when the sheet is dismissed (optional)
+                     }) {
+                         // Content of the sheet (two random numbers)
+                         RandomNumberView()
+                             .presentationDetents([.height(200), .medium, .large])
+                             .presentationDragIndicator(.automatic)
+                     }
             
               
                    VStack {
@@ -140,9 +140,11 @@ struct MapView: View {
 
 
 struct MapViewWithPin: UIViewRepresentable {
+  
     var coordinates: [CLLocationCoordinate2D]
     var labels: [String] // Add the labels array
     @Binding var region: MKCoordinateRegion
+    var onAnnotationTapped: (CLLocationCoordinate2D) -> Void 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator // Assign the coordinator as the delegate
@@ -199,7 +201,13 @@ struct MapViewWithPin: UIViewRepresentable {
         init(_ parent: MapViewWithPin) {
             self.parent = parent
         }
-
+        // Implement mapView(_:didSelect:) to handle the selection of annotations
+         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+             guard let annotation = view.annotation as? MKPointAnnotation else {
+                 return
+             }
+             parent.onAnnotationTapped(annotation.coordinate) // Call the closure with the tapped coordinate
+         }
         // Implement rendererFor method to draw the polyline
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             if let polyline = overlay as? MKPolyline {

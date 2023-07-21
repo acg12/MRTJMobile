@@ -22,6 +22,7 @@
 		0B01F51B2A693A7E001222D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5052A693A7E001222D3 /* Constants.swift */; };
 		0B01F51C2A693A7E001222D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B01F5062A693A7E001222D3 /* Assets.xcassets */; };
 		0B01F51D2A693A7E001222D3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5082A693A7E001222D3 /* LocationManager.swift */; };
+		8F4AA90B2A6A6AE0001719A0 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4AA90A2A6A6AE0001719A0 /* PartialSheet */; };
 		8FE589D12A6940E500B4DB0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D02A6940E500B4DB0D /* ContentView.swift */; };
 		8FE589D32A69411600B4DB0D /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D22A69411600B4DB0D /* Tabbar.swift */; };
 		8FE589D72A69415C00B4DB0D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D62A69415C00B4DB0D /* MapView.swift */; };
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4AA90B2A6A6AE0001719A0 /* PartialSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +379,9 @@
 			dependencies = (
 			);
 			name = MRTJMobile;
+			packageProductDependencies = (
+				8F4AA90A2A6A6AE0001719A0 /* PartialSheet */,
+			);
 			productName = MRTJMobile;
 			productReference = 0B01F4CE2A693A55001222D3 /* MRTJMobile.app */;
 			productType = "com.apple.product-type.application";
@@ -405,6 +410,9 @@
 				Base,
 			);
 			mainGroup = 0B01F4C52A693A55001222D3;
+			packageReferences = (
+				8F4AA9092A6A6AE0001719A0 /* XCRemoteSwiftPackageReference "PartialSheet" */,
+			);
 			productRefGroup = 0B01F4CF2A693A55001222D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -657,6 +665,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F4AA9092A6A6AE0001719A0 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F4AA90A2A6A6AE0001719A0 /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F4AA9092A6A6AE0001719A0 /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B01F4C62A693A55001222D3 /* Project object */;
 }
