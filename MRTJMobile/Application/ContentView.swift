@@ -14,12 +14,9 @@ struct ContentView: View {
     var body: some View {
         VStack{
             Image("Header")
-                .ignoresSafeArea()
                 .frame(height: 30)
            
             TabBarView(selectedTab: $selectedTab)
-//                .padding(.bottom, 0)
-////                .shadow(radius: 1)
         }
     }
 }

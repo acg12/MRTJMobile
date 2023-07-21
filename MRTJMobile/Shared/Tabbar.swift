@@ -9,33 +9,29 @@ import SwiftUI
 struct TabBarView: View {
     @Binding var selectedTab: Int
     
+    init(selectedTab: Binding<Int>) {
+        self._selectedTab = selectedTab
+
+        UITabBar.appearance().backgroundColor = UIColor(Color.white)
+    }
+    
     var body: some View {
-        NavigationView {
-            VStack(spacing: 0) {
-                Spacer()
-                
-                TabView(selection: $selectedTab) {
-                    ForEach(0..<tabItems.count) { index in
-                        tabItems[index].view
-                          
-                            .tabItem {
-                                
-                                Image(systemName: tabItems[index].iconName)
-                                
-                                Text(tabItems[index].title)
-                            }
-                            .tag(index)
-                            .id(index)
-                        
-                    }
+        NavigationStack {
+            TabView(selection: $selectedTab) {
+                ForEach(0..<tabItems.count) { index in
+                    tabItems[index].view
+                        .tabItem {
+                            
+                            Image(systemName: tabItems[index].iconName)
+                            
+                            Text(tabItems[index].title)
+                        }
+                        .tag(index)
+                        .id(index)
+                    
                 }
-                .accentColor(.blue)
-                
-                Spacer()
-                
-         
             }
-            .background(Color.white)
+            .accentColor(.blue)
             .navigationBarHidden(true)
         }
     }
