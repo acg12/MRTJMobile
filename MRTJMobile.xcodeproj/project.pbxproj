@@ -22,8 +22,12 @@
 		0B01F51B2A693A7E001222D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5052A693A7E001222D3 /* Constants.swift */; };
 		0B01F51C2A693A7E001222D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B01F5062A693A7E001222D3 /* Assets.xcassets */; };
 		0B01F51D2A693A7E001222D3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5082A693A7E001222D3 /* LocationManager.swift */; };
+
+		8F4AA90B2A6A6AE0001719A0 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4AA90A2A6A6AE0001719A0 /* PartialSheet */; };
+
 		0B01F5212A6A723B001222D3 /* DensityBoxCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5202A6A723B001222D3 /* DensityBoxCompact.swift */; };
 		0BB873C12A69777F00CBE4A4 /* DensityBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB873C02A69777F00CBE4A4 /* DensityBox.swift */; };
+
 		8FE589D12A6940E500B4DB0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D02A6940E500B4DB0D /* ContentView.swift */; };
 		8FE589D32A69411600B4DB0D /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D22A69411600B4DB0D /* Tabbar.swift */; };
 		8FE589D72A69415C00B4DB0D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D62A69415C00B4DB0D /* MapView.swift */; };
@@ -32,7 +36,11 @@
 		8FE589E32A6942B500B4DB0D /* package-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE589E02A6942B500B4DB0D /* package-lock.json */; };
 		8FE589E42A6942B500B4DB0D /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FE589E12A6942B500B4DB0D /* server.js */; };
 		8FE589E52A6942B500B4DB0D /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE589E22A6942B500B4DB0D /* package.json */; };
+
+		8FE589E72A694B2500B4DB0D /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589E62A694B2500B4DB0D /* Sheet.swift */; };
+
 		CC1406372A6A6FE50002AFD1 /* homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1406362A6A6FE50002AFD1 /* homepage.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,7 +78,11 @@
 		8FE589E02A6942B500B4DB0D /* package-lock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
 		8FE589E12A6942B500B4DB0D /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
 		8FE589E22A6942B500B4DB0D /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+
+		8FE589E62A694B2500B4DB0D /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
+
 		CC1406362A6A6FE50002AFD1 /* homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepage.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4AA90B2A6A6AE0001719A0 /* PartialSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +183,7 @@
 		0B01F4E72A693A7E001222D3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8FE589DA2A6941FD00B4DB0D /* ReceiverTemp.swift */,
 				8FE589D52A69414F00B4DB0D /* Map */,
 				0B01F4E82A693A7E001222D3 /* Home */,
 				0B01F4F42A693A7E001222D3 /* Schedule */,
@@ -350,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				8FE589D62A69415C00B4DB0D /* MapView.swift */,
-				8FE589DA2A6941FD00B4DB0D /* ReceiverTemp.swift */,
+				8FE589E62A694B2500B4DB0D /* Sheet.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -381,6 +395,9 @@
 			dependencies = (
 			);
 			name = MRTJMobile;
+			packageProductDependencies = (
+				8F4AA90A2A6A6AE0001719A0 /* PartialSheet */,
+			);
 			productName = MRTJMobile;
 			productReference = 0B01F4CE2A693A55001222D3 /* MRTJMobile.app */;
 			productType = "com.apple.product-type.application";
@@ -409,6 +426,9 @@
 				Base,
 			);
 			mainGroup = 0B01F4C52A693A55001222D3;
+			packageReferences = (
+				8F4AA9092A6A6AE0001719A0 /* XCRemoteSwiftPackageReference "PartialSheet" */,
+			);
 			productRefGroup = 0B01F4CF2A693A55001222D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -448,6 +468,7 @@
 				0B01F5182A693A7E001222D3 /* CurrLocationTextView.swift in Sources */,
 				8FE589D32A69411600B4DB0D /* Tabbar.swift in Sources */,
 				0B01F5172A693A7E001222D3 /* ScheduleViewModel.swift in Sources */,
+				8FE589E72A694B2500B4DB0D /* Sheet.swift in Sources */,
 				0B01F5142A693A7E001222D3 /* Train.swift in Sources */,
 				0B01F4D22A693A55001222D3 /* MRTJMobileApp.swift in Sources */,
 				0B01F5152A693A7E001222D3 /* MRTLine.swift in Sources */,
@@ -667,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F4AA9092A6A6AE0001719A0 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F4AA90A2A6A6AE0001719A0 /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F4AA9092A6A6AE0001719A0 /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B01F4C62A693A55001222D3 /* Project object */;
 }

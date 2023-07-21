@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
-
+import PartialSheet
 @main
 struct MRTJMobileApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .preferredColorScheme(.light)
-        }
-    }
-}
+
+    @StateObject private var partialSheetManager = PartialSheetManager()
+
+      var body: some Scene {
+          WindowGroup {
+              ContentView()
+                  // Set the environment object for PartialSheetManager
+                  .environmentObject(partialSheetManager)
+             .preferredColorScheme(.light)
+          }
+      }
+  }
+
+

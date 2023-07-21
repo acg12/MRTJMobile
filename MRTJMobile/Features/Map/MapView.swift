@@ -7,12 +7,13 @@
 
 import SwiftUI
 import MapKit
-
+import CoreLocation
 struct MapView: View {
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -6.239085, longitude: 106.7985954),
                                                    span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
     @State private var selectedPinIndex: Int? = nil
    
+       @State private var selectedCoordinate: CLLocationCoordinate2D? = nil
     @State private var showRandomSheet = false
     var coordinates: [CLLocationCoordinate2D] = [
         CLLocationCoordinate2D(latitude: -6.2894, longitude: 106.7740),
@@ -57,8 +58,22 @@ struct MapView: View {
                                           }
                               )
                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-
-                   MapViewWithPin(coordinates: coordinates, labels: labels, region: $region)
+                       
+                                           
+                                       
+            MapViewWithPin(coordinates: coordinates, labels: labels, region: $region, onAnnotationTapped: { coordinate in
+                         // Show the sheet when any of the pin points are tapped
+                         selectedCoordinate = coordinate
+                         showRandomSheet = true
+                     })
+                     .sheet(isPresented: $showRandomSheet, onDismiss: {
+                         // Code to perform when the sheet is dismissed (optional)
+                     }) {
+                         // Content of the sheet (two random numbers)
+                         RandomNumberView()
+                             .presentationDetents([.height(200), .medium, .large])
+                             .presentationDragIndicator(.automatic)
+                     }
             
               
                    VStack {
@@ -105,6 +120,13 @@ struct MapView: View {
                span.longitudeDelta = min(span.longitudeDelta * 2, 180)
                region.span = span
            }
+    private func getIndex(for coordinate: CLLocationCoordinate2D) -> Int? {
+         // Find the index of the tapped coordinate in the array of coordinates
+         guard let index = coordinates.firstIndex(of: coordinate) else {
+             return nil
+         }
+         return index
+     }
     private func zoom(_ scale: CGFloat) {
             var span = region.span
             span.latitudeDelta = max(min(span.latitudeDelta / scale, 180), 0.01)
@@ -118,9 +140,11 @@ struct MapView: View {
 
 
 struct MapViewWithPin: UIViewRepresentable {
+  
     var coordinates: [CLLocationCoordinate2D]
     var labels: [String] // Add the labels array
     @Binding var region: MKCoordinateRegion
+    var onAnnotationTapped: (CLLocationCoordinate2D) -> Void 
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator // Assign the coordinator as the delegate
@@ -177,7 +201,13 @@ struct MapViewWithPin: UIViewRepresentable {
         init(_ parent: MapViewWithPin) {
             self.parent = parent
         }
-
+        // Implement mapView(_:didSelect:) to handle the selection of annotations
+         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+             guard let annotation = view.annotation as? MKPointAnnotation else {
+                 return
+             }
+             parent.onAnnotationTapped(annotation.coordinate) // Call the closure with the tapped coordinate
+         }
         // Implement rendererFor method to draw the polyline
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             if let polyline = overlay as? MKPolyline {
@@ -191,6 +221,11 @@ struct MapViewWithPin: UIViewRepresentable {
     }
 }
 
+extension CLLocationCoordinate2D: Equatable {
+    public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+}
 
 
 
