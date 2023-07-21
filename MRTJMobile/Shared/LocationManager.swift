@@ -14,7 +14,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     @Published var locationStatus: CLAuthorizationStatus?
     @Published var lastLocation: CLLocation?
-    @Published var lastStation: String?
+    @Published var lastStation: Station?
 
     override init() {
         super.init()
@@ -57,11 +57,13 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         switch state {
         case .inside:
-            lastStation = region.identifier
+            lastStation = stations[region.identifier]
             print("inside \(region)")
         case .outside:
+            lastStation = stations[region.identifier]
             print("outside \(region)")
         case .unknown:
+            lastStation = stations[region.identifier]
             print("unknown")
         }
     }
