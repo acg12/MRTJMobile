@@ -16,4 +16,7 @@ internal enum Cons {
     internal static let densityBoxWidth: CGFloat = 37
     internal static let densityBoxHeight: CGFloat = 21
     internal static let densityBoxPadding: CGFloat = 5
+    
+    internal static let compDensBoxWidth: CGFloat = 37
+    internal static let compDensBoxHeight: CGFloat = 6
 }

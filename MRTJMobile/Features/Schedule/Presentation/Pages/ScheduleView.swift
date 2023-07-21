@@ -27,10 +27,10 @@ struct ScheduleView: View {
             }
             
             if let station = locationManager.lastStation {
-                ScheduleCardView(line: station.firstLine)
+                ScheduleCardView(line: station.firstLine, num: 1)
 
                 if let secondLine = station.secondLine {
-                    ScheduleCardView(line: secondLine)
+                    ScheduleCardView(line: secondLine, num: 2)
                 }
             }
             
