@@ -9,29 +9,113 @@ import SwiftUI
 
 struct ScheduleCardView: View {
     var line: MRTLine
+    var num: Int
+    @State var showNextTrains: Bool = false
     
     var body: some View {
         VStack(spacing: Cons.largeSpacing) {
             HStack(alignment: .center, spacing: Cons.spacing) {
-                Image("Line Number-1")
+                Image("Line Number-\(num)")
                 VStack(alignment: .leading) {
                     Text(line.destination)
-                        .font(.title)
+                        .font(.title2)
+                        .fontWeight(.medium)
                     Text(line.trains[0].getArrivalTime())
                         .font(.subheadline)
                 }
                 Spacer()
                 VStack {
                     Text("\(line.trains[0].getRemainingMinutes())")
-                        .font(.title)
+                        .font(.title2)
+                        .fontWeight(.medium)
                     Text("mins")
                         .font(.subheadline)
                 }
             }
             
-            ZStack {
-                Image("Train-left")
-                    .scaledToFill()
+            if line.direction == .left {
+                ZStack(alignment: .topLeading) {
+                    Image("Train-left")
+                        .scaledToFit()
+                    HStack(spacing: 4) {
+                        ForEach(line.trains[0].density, id: \.self) { density in
+                            DensityBox(density: density)
+                        }
+                    }
+                    .offset(x: Cons.densityBoxPadding, y: Cons.densityBoxPadding)
+                }
+            } else {
+                ZStack(alignment: .topTrailing) {
+                    Image("Train-right")
+                        .scaledToFit()
+                    HStack(spacing: 4) {
+                        ForEach(line.trains[0].density, id: \.self) { density in
+                            DensityBox(density: density)
+                        }
+                    }
+                    .offset(x: -Cons.densityBoxPadding, y: Cons.densityBoxPadding)
+                }
+            }
+            
+            // MARK: next train details
+            HStack(alignment: .top) {
+                Image(systemName: "clock")
+                
+                VStack(spacing: 20) {
+                    HStack {
+                        Text("Next Train")
+                            .font(.subheadline)
+                        Button {
+                            withAnimation(Animation.easeIn(duration: 0.2)) {
+                                showNextTrains.toggle()
+                            }
+                        } label: {
+                            HStack {
+                                Image(systemName: (showNextTrains ? "chevron.up" : "chevron.down"))
+                                Spacer()
+                            }
+                            .foregroundColor(.black)
+                        }
+                    }
+                    
+                    VStack {
+                        if line.trains.count > 1 {
+                            HStack(spacing: 2) {
+                                ForEach(line.trains[1].density, id: \.self) { density in
+                                    RoundedRectangle(cornerRadius: 1)
+                                        .foregroundColor((density <= 4) ? ((density <= 2) ? Color("boxGreen") : Color("boxOrange")) : Color("boxRed"))
+                                        .frame(width: Cons.compDensBoxWidth, height: Cons.compDensBoxHeight)
+                                }
+                                Spacer()
+                                Text("\(line.trains[1].getRemainingMinutes())")
+                                    .font(.subheadline)
+                                    .fontWeight(.medium)
+                                Text("mins")
+                                    .font(.caption)
+                            }
+                        }
+                        
+                        if line.trains.count > 2 {
+                            Divider()
+                                .padding([.top, .bottom])
+                            HStack(spacing: 2) {
+                                ForEach(line.trains[2].density, id: \.self) { density in
+                                    RoundedRectangle(cornerRadius: 1)
+                                        .foregroundColor((density <= 4) ? ((density <= 2) ? Color("boxGreen") : Color("boxOrange")) : Color("boxRed"))
+                                        .frame(width: Cons.compDensBoxWidth, height: Cons.compDensBoxHeight)
+                                }
+                                Spacer()
+                                Text("\(line.trains[2].getRemainingMinutes())")
+                                    .font(.subheadline)
+                                    .fontWeight(.medium)
+                                Text("mins")
+                                    .font(.caption)
+                            }
+                        }
+                    }
+                    .opacity(showNextTrains ? 1 : 0)
+                    .frame(height: (showNextTrains ? nil : 0))
+                }
             }
         }
         .padding(Cons.spacing)
@@ -43,8 +127,9 @@ struct ScheduleCardView: View {
 struct ScheduleCardView_Previews: PreviewProvider {
     static var previews: some View {
         ScheduleCardView(line: MRTLine(destination: "Bundaran HI", direction: .left, trains: [
-            Train(density: [0, 1, 2, 3, 2, 1], arrival: Date(timeIntervalSinceNow: 300)),
-            Train(density: [5, 5, 5, 5, 5, 5], arrival: Date(timeIntervalSinceNow: 600))
-        ]))
+            Train(density: [2, 2, 4, 5, 4, 1], arrival: Date(timeIntervalSinceNow: 300)),
+            Train(density: [5, 5, 5, 5, 5, 5], arrival: Date(timeIntervalSinceNow: 600)),
+            Train(density: [1, 1, 1, 5, 1, 1], arrival: Date(timeIntervalSinceNow: 900))
+        ]), num: 1)
     }
 }

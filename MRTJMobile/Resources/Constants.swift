@@ -12,4 +12,11 @@ internal enum Cons {
     internal static let spacing: CGFloat = 16
     internal static let largeSpacing: CGFloat = 32
     internal static let borderRadius: CGFloat = 25
+    
+    internal static let densityBoxWidth: CGFloat = 37
+    internal static let densityBoxHeight: CGFloat = 21
+    internal static let densityBoxPadding: CGFloat = 5
+    
+    internal static let compDensBoxWidth: CGFloat = 37
+    internal static let compDensBoxHeight: CGFloat = 6
 }

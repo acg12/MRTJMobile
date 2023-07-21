@@ -9,6 +9,7 @@ import SwiftUI
 import PartialSheet
 @main
 struct MRTJMobileApp: App {
+
     @StateObject private var partialSheetManager = PartialSheetManager()
 
       var body: some Scene {
@@ -16,6 +17,9 @@ struct MRTJMobileApp: App {
               ContentView()
                   // Set the environment object for PartialSheetManager
                   .environmentObject(partialSheetManager)
+             .preferredColorScheme(.light)
           }
       }
   }
+
+

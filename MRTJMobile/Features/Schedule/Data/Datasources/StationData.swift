@@ -8,9 +8,15 @@
 import Foundation
 import CoreLocation
 
-internal let stations = [
-    "Lebak Bulus Grab" : Station(name: "Lebak Bulus Grab", firstLine: MRTLine(destination: "Bundaran HI", direction: .left, trains: [
+internal let stations: [String : Station] =
+[
+    "Lebak Bulus Grab" : Station(name: "Lebak Bulus Grab", firstLine: MRTLine(destination: "Bundaran HI", direction: .right, trains: [
             Train(density: [0, 1, 2, 3, 2, 1], arrival: Date(timeIntervalSinceNow: 300)),
-            Train(density: [5, 5, 5, 5, 5, 5], arrival: Date(timeIntervalSinceNow: 600))
-        ]), latitude: -6.226963, longitude: 106.591275)
+            Train(density: [5, 5, 5, 5, 5, 5], arrival: Date(timeIntervalSinceNow: 600)),
+            Train(density: [1, 1, 3, 2, 1, 4], arrival: Date(timeIntervalSinceNow: 900))
+    ]), secondLine: MRTLine(destination: "Bundaran HI", direction: .left, trains: [
+            Train(density: [0, 1, 2, 3, 2, 1], arrival: Date(timeIntervalSinceNow: 300)),
+            Train(density: [5, 5, 5, 5, 5, 5], arrival: Date(timeIntervalSinceNow: 600)),
+            Train(density: [1, 1, 3, 2, 1, 4], arrival: Date(timeIntervalSinceNow: 900))
+    ]), latitude: -6.226963, longitude: 106.591275)
 ]
