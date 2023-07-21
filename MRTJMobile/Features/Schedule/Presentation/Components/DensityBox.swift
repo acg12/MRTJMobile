@@ -13,16 +13,14 @@ struct DensityBox: View {
     var width: CGFloat
     
     var body: some View {
-//        GeometryReader { reader in
-            ZStack {
-                RoundedRectangle(cornerRadius: 5)
-                    .foregroundColor((density <= 2) ? ((density <= 4) ? Color("boxGreen") : Color("boxOrange")) : Color("boxRed"))
-                    .frame(width: width, height: height)
-                Image(systemName: "figure.stand")
-                    .frame(height: height - 10)
-                    .foregroundColor(.white)
-            }
-//        }
+        ZStack {
+            RoundedRectangle(cornerRadius: 5)
+                .foregroundColor((density <= 4) ? ((density <= 2) ? Color("boxGreen") : Color("boxOrange")) : Color("boxRed"))
+                .frame(width: width, height: height)
+            Image(systemName: "figure.stand")
+                .frame(height: height - 10)
+                .foregroundColor(.white)
+        }
     }
 }
 
