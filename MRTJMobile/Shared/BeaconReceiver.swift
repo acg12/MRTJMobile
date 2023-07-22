@@ -15,7 +15,7 @@ class BeaconReceiver: NSObject, ObservableObject, CLLocationManagerDelegate {
 
     // Update the server URL with your server's IP address or domain name
     private let serverURL = "http://192.168.0.191:3000"
- // pake "ifconfig | grep "inet " | grep -v 127.0.0.1" to find out ipadress
+    // pake "ifconfig | grep "inet " | grep -v 127.0.0.1" to find out ipadress
     
     private let beacon1Identifier = "Beacon1"
     private let beacon2Identifier = "Beacon2" // Identifier for Beacon 2
@@ -102,6 +102,9 @@ class BeaconReceiver: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+        guard beacons != [] else {return}
+        
+        let beacon = beacons.first!
         let connected = !beacons.isEmpty
         let beaconIdentifier = region.identifier
 
@@ -109,6 +112,7 @@ class BeaconReceiver: NSObject, ObservableObject, CLLocationManagerDelegate {
             if connected && !isConnectedToBeacon1 {
                 beacon1Count += 1
                 isConnectedToBeacon1 = true
+                addPassenger(beacon)
             } else if !connected && isConnectedToBeacon1 {
                 beacon1Count -= 1
                 isConnectedToBeacon1 = false
@@ -117,10 +121,27 @@ class BeaconReceiver: NSObject, ObservableObject, CLLocationManagerDelegate {
             if connected && !isConnectedToBeacon2 {
                 beacon2Count += 1
                 isConnectedToBeacon2 = true
+                addPassenger(beacon)
             } else if !connected && isConnectedToBeacon2 {
                 beacon2Count -= 1
                 isConnectedToBeacon2 = false
             }
+        }
+    }
+    
+    func addPassenger(_ beacon: CLBeacon) {
+        let trainId = Int(truncating: beacon.major)
+        let cartId = Int(truncating: beacon.minor)
+        
+        trains[trainId - 1].density[cartId - 1] += 1
+    }
+    
+    func removePassenger(_ beacon: CLBeacon) {
+        let trainId = Int(truncating: beacon.major)
+        let cartId = Int(truncating: beacon.minor)
+        
+        if trains[trainId - 1].density[cartId - 1] > 0 {
+            trains[trainId - 1].density[cartId - 1] -= 1
         }
     }
 
@@ -255,9 +276,10 @@ class BeaconReceiver: NSObject, ObservableObject, CLLocationManagerDelegate {
     // MARK: - CLLocationManagerDelegate Methods
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedAlways {
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
             // Start monitoring and ranging for beacons when the "Always" authorization is granted
             startReceivingBeacons()
+            print("start receiving beacons")
         }
     }
 }

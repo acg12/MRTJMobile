@@ -46,7 +46,7 @@ struct TabBarItem {
 
 let tabItems: [TabBarItem] = [
     TabBarItem(iconName: "house", title: "Home", view:
-                AnyView(homeView())),
+                AnyView(HomeView())),
 //    tinggal ganti ke "AnyView(ContentView()))," sebagai contoh untuk masuk ke view masing-masing
     TabBarItem(iconName: "clock", title: "Schedule", view: AnyView(ScheduleView())),
     TabBarItem(iconName: "map", title: "Map", view: AnyView(MapView()))

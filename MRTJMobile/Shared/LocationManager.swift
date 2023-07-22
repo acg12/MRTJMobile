@@ -47,7 +47,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationStatus = status
         print(#function, statusString)
         
-        if status == .authorizedAlways {
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
             for station in stations {
                 locationManager.startMonitoring(for: station.value.region)
             }
@@ -55,16 +55,20 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
-        switch state {
-        case .inside:
-            lastStation = stations[region.identifier]
-            print("inside \(region)")
-        case .outside:
-            lastStation = stations[region.identifier]
-            print("outside \(region)")
-        case .unknown:
-            lastStation = stations[region.identifier]
-            print("unknown")
+        if region as? CLBeaconRegion != nil {
+            print("beacon detected")
+        } else {
+            switch state {
+            case .inside:
+                lastStation = stations[region.identifier]
+                print("inside \(region)")
+            case .outside:
+                lastStation = stations[region.identifier]
+                print("outside \(region)")
+            case .unknown:
+                lastStation = stations[region.identifier]
+                print("unknown")
+            }
         }
     }
     

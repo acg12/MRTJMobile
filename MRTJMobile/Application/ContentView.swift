@@ -10,6 +10,7 @@ import PartialSheet
 
 struct ContentView: View {
     @State private var selectedTab = 0
+    @ObservedObject private var beaconReceiver = BeaconReceiver()
     
     var body: some View {
         VStack{

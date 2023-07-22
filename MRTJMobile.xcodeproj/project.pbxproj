@@ -22,25 +22,19 @@
 		0B01F51B2A693A7E001222D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5052A693A7E001222D3 /* Constants.swift */; };
 		0B01F51C2A693A7E001222D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B01F5062A693A7E001222D3 /* Assets.xcassets */; };
 		0B01F51D2A693A7E001222D3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5082A693A7E001222D3 /* LocationManager.swift */; };
-
-		8F4AA90B2A6A6AE0001719A0 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4AA90A2A6A6AE0001719A0 /* PartialSheet */; };
-
 		0B01F5212A6A723B001222D3 /* DensityBoxCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5202A6A723B001222D3 /* DensityBoxCompact.swift */; };
+		0B01F5252A6A982E001222D3 /* TrainTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5242A6A982E001222D3 /* TrainTime.swift */; };
 		0BB873C12A69777F00CBE4A4 /* DensityBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB873C02A69777F00CBE4A4 /* DensityBox.swift */; };
-
+		8F4AA90B2A6A6AE0001719A0 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4AA90A2A6A6AE0001719A0 /* PartialSheet */; };
 		8FE589D12A6940E500B4DB0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D02A6940E500B4DB0D /* ContentView.swift */; };
-		8FE589D32A69411600B4DB0D /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D22A69411600B4DB0D /* Tabbar.swift */; };
+		8FE589D32A69411600B4DB0D /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D22A69411600B4DB0D /* TabView.swift */; };
 		8FE589D72A69415C00B4DB0D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D62A69415C00B4DB0D /* MapView.swift */; };
-		8FE589D92A6941BF00B4DB0D /* BeaconReceiverClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D82A6941BF00B4DB0D /* BeaconReceiverClass.swift */; };
-		8FE589DB2A6941FD00B4DB0D /* ReceiverTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589DA2A6941FD00B4DB0D /* ReceiverTemp.swift */; };
+		8FE589D92A6941BF00B4DB0D /* BeaconReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D82A6941BF00B4DB0D /* BeaconReceiver.swift */; };
 		8FE589E32A6942B500B4DB0D /* package-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE589E02A6942B500B4DB0D /* package-lock.json */; };
 		8FE589E42A6942B500B4DB0D /* server.js in Resources */ = {isa = PBXBuildFile; fileRef = 8FE589E12A6942B500B4DB0D /* server.js */; };
 		8FE589E52A6942B500B4DB0D /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = 8FE589E22A6942B500B4DB0D /* package.json */; };
-
 		8FE589E72A694B2500B4DB0D /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589E62A694B2500B4DB0D /* Sheet.swift */; };
-
-		CC1406372A6A6FE50002AFD1 /* homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1406362A6A6FE50002AFD1 /* homepage.swift */; };
-
+		CC1406372A6A6FE50002AFD1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1406362A6A6FE50002AFD1 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,22 +61,19 @@
 		0B01F5082A693A7E001222D3 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0B01F50A2A693A7E001222D3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		0B01F5202A6A723B001222D3 /* DensityBoxCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DensityBoxCompact.swift; sourceTree = "<group>"; };
+		0B01F5242A6A982E001222D3 /* TrainTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainTime.swift; sourceTree = "<group>"; };
 		0BB873C02A69777F00CBE4A4 /* DensityBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DensityBox.swift; sourceTree = "<group>"; };
 		8FE589D02A6940E500B4DB0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8FE589D22A69411600B4DB0D /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		8FE589D22A69411600B4DB0D /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		8FE589D62A69415C00B4DB0D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		8FE589D82A6941BF00B4DB0D /* BeaconReceiverClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconReceiverClass.swift; sourceTree = "<group>"; };
-		8FE589DA2A6941FD00B4DB0D /* ReceiverTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTemp.swift; sourceTree = "<group>"; };
+		8FE589D82A6941BF00B4DB0D /* BeaconReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconReceiver.swift; sourceTree = "<group>"; };
 		8FE589DC2A69423800B4DB0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8FE589DD2A69423D00B4DB0D /* MRTJMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MRTJMobile.entitlements; sourceTree = "<group>"; };
 		8FE589E02A6942B500B4DB0D /* package-lock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "package-lock.json"; sourceTree = "<group>"; };
 		8FE589E12A6942B500B4DB0D /* server.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = server.js; sourceTree = "<group>"; };
 		8FE589E22A6942B500B4DB0D /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
-
 		8FE589E62A694B2500B4DB0D /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
-
-		CC1406362A6A6FE50002AFD1 /* homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepage.swift; sourceTree = "<group>"; };
-
+		CC1406362A6A6FE50002AFD1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +174,6 @@
 		0B01F4E72A693A7E001222D3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8FE589DA2A6941FD00B4DB0D /* ReceiverTemp.swift */,
 				8FE589D52A69414F00B4DB0D /* Map */,
 				0B01F4E82A693A7E001222D3 /* Home */,
 				0B01F4F42A693A7E001222D3 /* Schedule */,
@@ -246,7 +236,7 @@
 		0B01F4F22A693A7E001222D3 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				CC1406362A6A6FE50002AFD1 /* homepage.swift */,
+				CC1406362A6A6FE50002AFD1 /* HomeView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -283,6 +273,7 @@
 				0B01F4F92A693A7E001222D3 /* Train.swift */,
 				0B01F4FA2A693A7E001222D3 /* MRTLine.swift */,
 				0B01F4FB2A693A7E001222D3 /* Station.swift */,
+				0B01F5242A6A982E001222D3 /* TrainTime.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,8 +327,8 @@
 		0B01F5072A693A7E001222D3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8FE589D82A6941BF00B4DB0D /* BeaconReceiver.swift */,
 				0B01F5082A693A7E001222D3 /* LocationManager.swift */,
-				8FE589D22A69411600B4DB0D /* Tabbar.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -353,9 +344,9 @@
 		0B01F51F2A693AAA001222D3 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				8FE589D22A69411600B4DB0D /* TabView.swift */,
 				0B01F4D12A693A55001222D3 /* MRTJMobileApp.swift */,
 				8FE589D02A6940E500B4DB0D /* ContentView.swift */,
-				8FE589D82A6941BF00B4DB0D /* BeaconReceiverClass.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -459,26 +450,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B01F5132A693A7E001222D3 /* StationData.swift in Sources */,
-				8FE589D92A6941BF00B4DB0D /* BeaconReceiverClass.swift in Sources */,
+				8FE589D92A6941BF00B4DB0D /* BeaconReceiver.swift in Sources */,
 				8FE589D72A69415C00B4DB0D /* MapView.swift in Sources */,
 				0B01F50D2A693A7E001222D3 /* UseCase.swift in Sources */,
 				8FE589D12A6940E500B4DB0D /* ContentView.swift in Sources */,
 				0B01F50C2A693A7E001222D3 /* Failure.swift in Sources */,
 				0B01F5192A693A7E001222D3 /* ScheduleCardView.swift in Sources */,
 				0B01F5182A693A7E001222D3 /* CurrLocationTextView.swift in Sources */,
-				8FE589D32A69411600B4DB0D /* Tabbar.swift in Sources */,
+				8FE589D32A69411600B4DB0D /* TabView.swift in Sources */,
 				0B01F5172A693A7E001222D3 /* ScheduleViewModel.swift in Sources */,
 				8FE589E72A694B2500B4DB0D /* Sheet.swift in Sources */,
+				0B01F5252A6A982E001222D3 /* TrainTime.swift in Sources */,
 				0B01F5142A693A7E001222D3 /* Train.swift in Sources */,
 				0B01F4D22A693A55001222D3 /* MRTJMobileApp.swift in Sources */,
 				0B01F5152A693A7E001222D3 /* MRTLine.swift in Sources */,
 				0B01F51A2A693A7E001222D3 /* ScheduleView.swift in Sources */,
 				0B01F5162A693A7E001222D3 /* Station.swift in Sources */,
-				CC1406372A6A6FE50002AFD1 /* homepage.swift in Sources */,
+				CC1406372A6A6FE50002AFD1 /* HomeView.swift in Sources */,
 				0B01F51B2A693A7E001222D3 /* Constants.swift in Sources */,
 				0B01F5212A6A723B001222D3 /* DensityBoxCompact.swift in Sources */,
 				0BB873C12A69777F00CBE4A4 /* DensityBox.swift in Sources */,
-				8FE589DB2A6941FD00B4DB0D /* ReceiverTemp.swift in Sources */,
 				0B01F51D2A693A7E001222D3 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,7 +600,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MRTJMobile/Preview Content\"";
-				DEVELOPMENT_TEAM = VL4T2DFCRG;
+				DEVELOPMENT_TEAM = 897329R84L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MRTJMobile/Info.plist;
@@ -642,7 +633,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MRTJMobile/Preview Content\"";
-				DEVELOPMENT_TEAM = VL4T2DFCRG;
+				DEVELOPMENT_TEAM = 897329R84L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MRTJMobile/Info.plist;

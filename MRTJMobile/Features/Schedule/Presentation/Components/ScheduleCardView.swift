@@ -38,7 +38,7 @@ struct ScheduleCardView: View {
                     Image("Train-left")
                         .scaledToFit()
                     HStack(spacing: 4) {
-                        ForEach(line.trains[0].density, id: \.self) { density in
+                        ForEach(line.trains[0].train.density, id: \.self) { density in
                             DensityBox(density: density)
                         }
                     }
@@ -49,7 +49,7 @@ struct ScheduleCardView: View {
                     Image("Train-right")
                         .scaledToFit()
                     HStack(spacing: 4) {
-                        ForEach(line.trains[0].density, id: \.self) { density in
+                        ForEach(line.trains[0].train.density, id: \.self) { density in
                             DensityBox(density: density)
                         }
                     }
@@ -81,7 +81,7 @@ struct ScheduleCardView: View {
                     VStack {
                         if line.trains.count > 1 {
                             HStack(spacing: 2) {
-                                ForEach(line.trains[1].density, id: \.self) { density in
+                                ForEach(line.trains[1].train.density, id: \.self) { density in
                                     RoundedRectangle(cornerRadius: 1)
                                         .foregroundColor((density <= 4) ? ((density <= 2) ? Color("boxGreen") : Color("boxOrange")) : Color("boxRed"))
                                         .frame(width: Cons.compDensBoxWidth, height: Cons.compDensBoxHeight)
@@ -99,7 +99,7 @@ struct ScheduleCardView: View {
                             Divider()
                                 .padding([.top, .bottom])
                             HStack(spacing: 2) {
-                                ForEach(line.trains[2].density, id: \.self) { density in
+                                ForEach(line.trains[2].train.density, id: \.self) { density in
                                     RoundedRectangle(cornerRadius: 1)
                                         .foregroundColor((density <= 4) ? ((density <= 2) ? Color("boxGreen") : Color("boxOrange")) : Color("boxRed"))
                                         .frame(width: Cons.compDensBoxWidth, height: Cons.compDensBoxHeight)
@@ -127,9 +127,9 @@ struct ScheduleCardView: View {
 struct ScheduleCardView_Previews: PreviewProvider {
     static var previews: some View {
         ScheduleCardView(line: MRTLine(destination: "Bundaran HI", direction: .left, trains: [
-            Train(density: [2, 2, 4, 5, 4, 1], arrival: Date(timeIntervalSinceNow: 300)),
-            Train(density: [5, 5, 5, 5, 5, 5], arrival: Date(timeIntervalSinceNow: 600)),
-            Train(density: [1, 1, 1, 5, 1, 1], arrival: Date(timeIntervalSinceNow: 900))
+            TrainTime(train: trains[0], arrival: Date(timeIntervalSinceNow: 300)),
+            TrainTime(train: trains[1], arrival: Date(timeIntervalSinceNow: 600)),
+            TrainTime(train: trains[2], arrival: Date(timeIntervalSinceNow: 900)),
         ]), num: 1)
     }
 }
