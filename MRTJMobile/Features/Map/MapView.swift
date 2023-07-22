@@ -13,8 +13,9 @@ struct MapView: View {
                                                    span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
     @State private var selectedPinIndex: Int? = nil
    
-       @State private var selectedCoordinate: CLLocationCoordinate2D? = nil
+    @State private var selectedCoordinate: CLLocationCoordinate2D? = nil
     @State private var showRandomSheet = false
+    
     var coordinates: [CLLocationCoordinate2D] = [
         CLLocationCoordinate2D(latitude: -6.2894, longitude: 106.7740),
        
@@ -226,8 +227,6 @@ extension CLLocationCoordinate2D: Equatable {
         return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
     }
 }
-
-
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {

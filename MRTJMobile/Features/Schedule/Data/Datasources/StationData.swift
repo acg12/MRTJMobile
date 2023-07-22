@@ -35,8 +35,7 @@ internal var trains = [
     Train(id: 6, density: [1, 1, 2, 5, 2, 1]),
 ]
 
-internal let stations: [String : Station] =
-[
+internal var stations = [
     "Lebak Bulus Grab" : Station(name: "Lebak Bulus Grab", firstLine: MRTLine(destination: "Bundaran HI", direction: .right, trains: [
         TrainTime(train: trains[0], arrival: Date(timeIntervalSinceNow: 300)),
         TrainTime(train: trains[1], arrival: Date(timeIntervalSinceNow: 600)),
@@ -65,3 +64,39 @@ internal let stations: [String : Station] =
         TrainTime(train: trains[5], arrival: Date(timeIntervalSinceNow: 800)),
     ]), latitude: -6.278104616151923, longitude: 106.79798718927083),
 ]
+
+//class StationData: ObservableObject {
+//    @Published var stations: [String : Station]
+//
+//    init() {
+//        self.stations = [
+//            "Lebak Bulus Grab" : Station(name: "Lebak Bulus Grab", firstLine: MRTLine(destination: "Bundaran HI", direction: .right, trains: [
+//                TrainTime(train: trains[0], arrival: Date(timeIntervalSinceNow: 300)),
+//                TrainTime(train: trains[1], arrival: Date(timeIntervalSinceNow: 600)),
+//                TrainTime(train: trains[2], arrival: Date(timeIntervalSinceNow: 900)),
+//            ]), secondLine: MRTLine(destination: "Bundaran HI", direction: .right, trains: [
+//                TrainTime(train: trains[3], arrival: Date(timeIntervalSinceNow: 300)),
+//                TrainTime(train: trains[4], arrival: Date(timeIntervalSinceNow: 700)),
+//                TrainTime(train: trains[5], arrival: Date(timeIntervalSinceNow: 800)),
+//            ]), latitude: -6.289361581369295, longitude: 106.77411877729375),
+//            "Fatmawati" : Station(name: "Fatmawati", firstLine: MRTLine(destination: "Lebak Bulus Grab", direction: .left, trains: [
+//                TrainTime(train: trains[0], arrival: Date(timeIntervalSinceNow: 300)),
+//                TrainTime(train: trains[1], arrival: Date(timeIntervalSinceNow: 600)),
+//                TrainTime(train: trains[2], arrival: Date(timeIntervalSinceNow: 900)),
+//            ]), secondLine: MRTLine(destination: "Bundaran HI", direction: .right, trains: [
+//                TrainTime(train: trains[3], arrival: Date(timeIntervalSinceNow: 300)),
+//                TrainTime(train: trains[4], arrival: Date(timeIntervalSinceNow: 700)),
+//                TrainTime(train: trains[5], arrival: Date(timeIntervalSinceNow: 800)),
+//            ]), latitude: -6.29233267870528, longitude: 106.79289988304943),
+//            "Cipete Raya" : Station(name: "Cipete Raya", firstLine: MRTLine(destination: "Lebak Bulus Grab", direction: .left, trains: [
+//                TrainTime(train: trains[0], arrival: Date(timeIntervalSinceNow: 300)),
+//                TrainTime(train: trains[1], arrival: Date(timeIntervalSinceNow: 600)),
+//                TrainTime(train: trains[2], arrival: Date(timeIntervalSinceNow: 900)),
+//            ]), secondLine: MRTLine(destination: "Bundaran HI", direction: .right, trains: [
+//                TrainTime(train: trains[3], arrival: Date(timeIntervalSinceNow: 300)),
+//                TrainTime(train: trains[4], arrival: Date(timeIntervalSinceNow: 700)),
+//                TrainTime(train: trains[5], arrival: Date(timeIntervalSinceNow: 800)),
+//            ]), latitude: -6.278104616151923, longitude: 106.79798718927083),
+//        ]
+//    }
+//}

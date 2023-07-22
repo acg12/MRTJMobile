@@ -15,12 +15,8 @@ struct RandomNumberView: View {
         VStack {
             HStack {
                 Image("tren")
-                    
-                   
                 VStack(alignment: .leading) {
-                
                     Text("You're now at :")
-                        
                     Text("BLOK M BCA")
                         .font(.title)
                 }

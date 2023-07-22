@@ -22,9 +22,10 @@
 		0B01F51B2A693A7E001222D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5052A693A7E001222D3 /* Constants.swift */; };
 		0B01F51C2A693A7E001222D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B01F5062A693A7E001222D3 /* Assets.xcassets */; };
 		0B01F51D2A693A7E001222D3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5082A693A7E001222D3 /* LocationManager.swift */; };
-		0B01F5212A6A723B001222D3 /* DensityBoxCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5202A6A723B001222D3 /* DensityBoxCompact.swift */; };
 		0B01F5252A6A982E001222D3 /* TrainTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01F5242A6A982E001222D3 /* TrainTime.swift */; };
 		0BB873C12A69777F00CBE4A4 /* DensityBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB873C02A69777F00CBE4A4 /* DensityBox.swift */; };
+		0BFD735E2A6B9C3A000F8B5A /* PartialSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD735D2A6B9C3A000F8B5A /* PartialSheetManager.swift */; };
+		0BFD73602A6BA59B000F8B5A /* TrainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD735F2A6BA59B000F8B5A /* TrainData.swift */; };
 		8F4AA90B2A6A6AE0001719A0 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4AA90A2A6A6AE0001719A0 /* PartialSheet */; };
 		8FE589D12A6940E500B4DB0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D02A6940E500B4DB0D /* ContentView.swift */; };
 		8FE589D32A69411600B4DB0D /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE589D22A69411600B4DB0D /* TabView.swift */; };
@@ -60,9 +61,10 @@
 		0B01F5062A693A7E001222D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B01F5082A693A7E001222D3 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0B01F50A2A693A7E001222D3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		0B01F5202A6A723B001222D3 /* DensityBoxCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DensityBoxCompact.swift; sourceTree = "<group>"; };
 		0B01F5242A6A982E001222D3 /* TrainTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainTime.swift; sourceTree = "<group>"; };
 		0BB873C02A69777F00CBE4A4 /* DensityBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DensityBox.swift; sourceTree = "<group>"; };
+		0BFD735D2A6B9C3A000F8B5A /* PartialSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartialSheetManager.swift; sourceTree = "<group>"; };
+		0BFD735F2A6BA59B000F8B5A /* TrainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainData.swift; sourceTree = "<group>"; };
 		8FE589D02A6940E500B4DB0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8FE589D22A69411600B4DB0D /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		8FE589D62A69415C00B4DB0D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -174,9 +176,9 @@
 		0B01F4E72A693A7E001222D3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				8FE589D52A69414F00B4DB0D /* Map */,
 				0B01F4E82A693A7E001222D3 /* Home */,
 				0B01F4F42A693A7E001222D3 /* Schedule */,
+				8FE589D52A69414F00B4DB0D /* Map */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -263,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				0B01F4F72A693A7E001222D3 /* StationData.swift */,
+				0BFD735F2A6BA59B000F8B5A /* TrainData.swift */,
 			);
 			path = Datasources;
 			sourceTree = "<group>";
@@ -302,7 +305,6 @@
 				0B01F5002A693A7E001222D3 /* CurrLocationTextView.swift */,
 				0B01F5012A693A7E001222D3 /* ScheduleCardView.swift */,
 				0BB873C02A69777F00CBE4A4 /* DensityBox.swift */,
-				0B01F5202A6A723B001222D3 /* DensityBoxCompact.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -354,6 +356,7 @@
 		8FE589D52A69414F00B4DB0D /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				0BFD735D2A6B9C3A000F8B5A /* PartialSheetManager.swift */,
 				8FE589D62A69415C00B4DB0D /* MapView.swift */,
 				8FE589E62A694B2500B4DB0D /* Sheet.swift */,
 			);
@@ -456,6 +459,7 @@
 				8FE589D12A6940E500B4DB0D /* ContentView.swift in Sources */,
 				0B01F50C2A693A7E001222D3 /* Failure.swift in Sources */,
 				0B01F5192A693A7E001222D3 /* ScheduleCardView.swift in Sources */,
+				0BFD735E2A6B9C3A000F8B5A /* PartialSheetManager.swift in Sources */,
 				0B01F5182A693A7E001222D3 /* CurrLocationTextView.swift in Sources */,
 				8FE589D32A69411600B4DB0D /* TabView.swift in Sources */,
 				0B01F5172A693A7E001222D3 /* ScheduleViewModel.swift in Sources */,
@@ -466,9 +470,9 @@
 				0B01F5152A693A7E001222D3 /* MRTLine.swift in Sources */,
 				0B01F51A2A693A7E001222D3 /* ScheduleView.swift in Sources */,
 				0B01F5162A693A7E001222D3 /* Station.swift in Sources */,
+				0BFD73602A6BA59B000F8B5A /* TrainData.swift in Sources */,
 				CC1406372A6A6FE50002AFD1 /* HomeView.swift in Sources */,
 				0B01F51B2A693A7E001222D3 /* Constants.swift in Sources */,
-				0B01F5212A6A723B001222D3 /* DensityBoxCompact.swift in Sources */,
 				0BB873C12A69777F00CBE4A4 /* DensityBox.swift in Sources */,
 				0B01F51D2A693A7E001222D3 /* LocationManager.swift in Sources */,
 			);
@@ -600,27 +604,31 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MRTJMobile/Preview Content\"";
-				DEVELOPMENT_TEAM = 897329R84L;
+				DEVELOPMENT_TEAM = WML2Q26MG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MRTJMobile/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need to see location";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location access is required to detect beacons in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location access is required to detect beacons in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = angela.nano3.MRTJMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = angela.nano3.MRTJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -633,27 +641,31 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MRTJMobile/Preview Content\"";
-				DEVELOPMENT_TEAM = 897329R84L;
+				DEVELOPMENT_TEAM = WML2Q26MG6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MRTJMobile/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Need to see location";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location access is required to detect beacons in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location access is required to detect beacons in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = angela.nano3.MRTJMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = angela.nano3.MRTJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

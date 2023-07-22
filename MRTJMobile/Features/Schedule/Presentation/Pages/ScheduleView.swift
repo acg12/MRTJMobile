@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScheduleView: View {
-    @ObservedObject var locationManager = LocationManager()
+    @EnvironmentObject var locationManager: LocationManager
     @ObservedObject var scheduleVM = ScheduleViewModel()
     
     @State private var available = false
@@ -44,5 +44,6 @@ struct ScheduleView: View {
 struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
         ScheduleView()
+            .environmentObject(LocationManager.shared)
     }
 }
