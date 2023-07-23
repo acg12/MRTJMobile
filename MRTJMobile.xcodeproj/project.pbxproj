@@ -608,11 +608,16 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MRTJMobile/Info.plist;
+<<<<<<< Updated upstream
 				INFOPLIST_KEY_CFBundleDisplayName = "MRTJ Mobile";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location access is required to detect beacons in the background.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location access is required to detect beacons in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+=======
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location access is required to detect beacons in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location access is required to detect beacons in the background.";
+>>>>>>> Stashed changes
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -647,11 +652,16 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MRTJMobile/Info.plist;
+<<<<<<< Updated upstream
 				INFOPLIST_KEY_CFBundleDisplayName = "MRTJ Mobile";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location access is required to detect beacons in the background.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location access is required to detect beacons in the background.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+=======
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location access is required to detect beacons in the background.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location access is required to detect beacons in the background.";
+>>>>>>> Stashed changes
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
