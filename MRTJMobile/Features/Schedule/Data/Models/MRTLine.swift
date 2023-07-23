@@ -14,5 +14,5 @@ enum ArrDirection {
 struct MRTLine {
     var destination: String
     var direction: ArrDirection
-    var trains: [Train]
+    var trains: [TrainTime]
 }

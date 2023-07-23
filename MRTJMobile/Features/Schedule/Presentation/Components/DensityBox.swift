@@ -18,6 +18,7 @@ struct DensityBox: View {
             Image(systemName: "figure.stand")
                 .frame(height: Cons.densityBoxHeight - 10)
                 .foregroundColor(.white)
+//            Text("\(density)")
         }
     }
 }

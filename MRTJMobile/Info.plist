@@ -2,22 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-      <string>Location access is required to detect beacons in the background.</string>
-      <key>NSLocationAlwaysUsageDescription</key>
-      <string>Location access is required to detect beacons in the background.</string>
-      <key>UIBackgroundModes</key>
-      <array>
-          <string>location</string>
-      </array>
-    <key>UIBackgroundModes</key>
-    <array>
-        <string>bluetooth-central</string>
-        <string>bluetooth-peripheral</string>
-        <string>fetch</string>
-        <string>location</string>
-        <string>processing</string>
-        <string>remote-notification</string>
-    </array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+		<string>fetch</string>
+		<string>location</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>
