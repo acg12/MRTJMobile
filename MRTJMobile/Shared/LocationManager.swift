@@ -269,10 +269,8 @@ extension LocationManager: CLLocationManagerDelegate {
                 lastStation = stations[region.identifier]
                 print("inside \(region)")
             case .outside:
-                lastStation = stations[region.identifier]
                 print("outside \(region)")
             case .unknown:
-                lastStation = stations[region.identifier]
                 print("unknown")
             }
         }

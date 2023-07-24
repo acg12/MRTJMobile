@@ -35,6 +35,8 @@ internal var trains = [
     Train(id: 6, density: [1, 1, 2, 5, 2, 1]),
 ]
 
+internal var stationNames = ["Lebak Bulus Grab", "Fatmawati", "Cipete Raya"]
+
 internal var stations = [
     "Lebak Bulus Grab" : Station(name: "Lebak Bulus Grab", firstLine: MRTLine(destination: "Bundaran HI", direction: .right, trains: [
         TrainTime(train: trains[0], arrival: Date(timeIntervalSinceNow: 300)),
