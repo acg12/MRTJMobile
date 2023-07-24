@@ -37,7 +37,6 @@ struct ScheduleView: View {
             Spacer()
         }
         .padding(Cons.padding)
-        .background(Color("backgroundGrey"))
     }
 }
 

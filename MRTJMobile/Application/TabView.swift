@@ -24,6 +24,7 @@ struct TabBarView: View {
                         Text("Home")
                     }
                     .tag(1)
+                    .background(Color("backgroundGrey"))
                 
                 ScheduleView()
                     .tabItem {
@@ -32,6 +33,7 @@ struct TabBarView: View {
                     }
                     .tag(2)
                     .environmentObject(locationManager)
+                    .background(Color("backgroundGrey"))
                 
                 MapView()
                     .tabItem {
@@ -40,6 +42,7 @@ struct TabBarView: View {
                     }
                     .tag(3)
                     .environmentObject(locationManager)
+                    .background(Color("backgroundGrey"))
             }
             .accentColor(.blue)
             .navigationBarHidden(true)

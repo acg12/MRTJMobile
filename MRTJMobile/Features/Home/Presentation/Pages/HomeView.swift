@@ -21,14 +21,14 @@ struct HomeView: View {
                             .frame(width: 348, height: 122)
                             .clipped()
                     )
-                    .background(Color(red: 0, green: 0.23, blue: 0.58))
-                    .cornerRadius(13)
-                    .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 13)
-                            .inset(by: 1.5)
-                            .stroke(.white, lineWidth: 3)
-                    )
+//                    .background(Color(red: 0, green: 0.23, blue: 0.58))
+//                    .cornerRadius(13)
+//                    .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
+//                    .overlay(
+//                        RoundedRectangle(cornerRadius: 13)
+//                            .inset(by: 1.5)
+//                            .stroke(.white, lineWidth: 3)
+//                    )
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         VStack {

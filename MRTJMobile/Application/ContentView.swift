@@ -13,9 +13,9 @@ struct ContentView: View {
     @EnvironmentObject private var locationManager: LocationManager
     
     var body: some View {
-        VStack{
+        VStack {
             Image("Header")
-                .frame(height: 30)
+//                .frame(height: 30)
            
             TabBarView(selectedTab: $selectedTab)
                 .environmentObject(locationManager)
@@ -23,6 +23,8 @@ struct ContentView: View {
         .onAppear {
             locationManager.startReceivingBeacons()
         }
+        .background(Color("backgroundGrey"))
+        .ignoresSafeArea()
     }
 }
 
